@@ -22,6 +22,10 @@ const footerLinks = {
     { label: 'Disclaimer', href: '#' },
     { label: 'Contact', href: '#' },
   ],
+  Partners: [
+    { label: 'Imposter Game', href: 'http://impostergame.pro/', external: true },
+    { label: 'Bojack Test', href: 'https://www.bojacktest.com/', external: true },
+  ],
 };
 
 export default function Footer() {
@@ -39,8 +43,8 @@ export default function Footer() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: '1.5fr 1fr 1fr 1fr',
-            gap: '3rem',
+            gridTemplateColumns: '1.2fr 1fr 1fr 1fr 1fr',
+            gap: '2.5rem',
             marginBottom: '3rem',
           }}
         >
