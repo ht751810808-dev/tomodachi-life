@@ -67,6 +67,11 @@ export default function RootLayout({
             gtag('config', 'G-1NFDZXRD9X');
           `}
         </Script>
+        {/* Ads Script */}
+        <Script
+          src="https://pl28931065.effectivegatecpm.com/3e/89/e4/3e89e4cccaa743051cb61f3d59225c0f.js"
+          strategy="lazyOnload"
+        />
       </head>
       <body>{children}</body>
     </html>
