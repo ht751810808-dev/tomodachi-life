@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ROBLOX_GAME_URL = 'https://www.roblox.com/games/15328407422/UPD-Titan-Fishing';
+const ROBLOX_GAME_URL = 'https://www.roblox.com/games/115893378298440/Titan-Fishing';
 
 const navLinks = [
   { href: '#codes', label: 'Codes' },
-  { href: '#guides', label: 'Guides' },
+  { href: '#skills', label: 'Skills' },
   { href: '#features', label: 'Features' },
-  { href: '#faq', label: 'FAQ' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 export default function Header() {

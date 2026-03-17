@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const ROBLOX_GAME_URL = 'https://www.roblox.com/games/15328407422/UPD-Titan-Fishing';
+const ROBLOX_GAME_URL = 'https://www.roblox.com/games/115893378298440/Titan-Fishing';
 
 const stats = [
   { value: '4M+', label: 'Total Players', icon: '🎮' },

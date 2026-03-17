@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import CodesSection from '@/components/CodesSection';
+import SkillsSection from '@/components/SkillsSection';
 import Features from '@/components/Features';
 import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
@@ -29,10 +30,10 @@ const faqStructuredData = {
     },
     {
       '@type': 'Question',
-      name: 'Is Titan Fishing free to play?',
+      name: 'What is the best skill in Titan Fishing?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! Titan Fishing is completely free to play on Roblox. Use codes to get free Cash and progress faster.',
+        text: 'Nebula Lure and Reality Warp are currently ranked as S-Tier skills, offering the highest luck and power for catching mythical titans.',
       },
     },
   ],
@@ -56,13 +57,16 @@ export default function HomePage() {
         {/* 2. 兑换码核心区（搜索量最高关键词） */}
         <CodesSection />
 
-        {/* 3. 游戏特色 + 攻略预览 */}
+        {/* 3. 技能阶梯图（高互动内容） */}
+        <SkillsSection />
+
+        {/* 4. 游戏特色 + 攻略预览 */}
         <Features />
 
-        {/* 4. FAQ（SEO 内容 + 长尾词） */}
+        {/* 5. FAQ（SEO 内容 + 长尾词） */}
         <FAQ />
 
-        {/* 5. 底部 CTA */}
+        {/* 6. 底部 CTA */}
         <FinalCTA />
       </main>
 
