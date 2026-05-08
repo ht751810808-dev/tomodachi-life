@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "tomodachi-life",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-05-08",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    { "pattern": "tomodachi-life.org/*", "zone_name": "tomodachi-life.org" },
+    { "pattern": "www.tomodachi-life.org/*", "zone_name": "tomodachi-life.org" }
+  ]
+}

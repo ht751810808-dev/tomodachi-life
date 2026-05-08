@@ -16,6 +16,7 @@
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.8",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.16",
@@ -23,6 +24,7 @@
     "eslint-config-next": "^16.2.6",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "wrangler": "^4.90.0"
   }
 }
