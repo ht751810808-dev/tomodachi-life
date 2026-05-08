@@ -3,71 +3,60 @@ import Script from 'next/script';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Titan Fishing Codes 2026 – Roblox Guide, Wiki & All Codes | titanfishing.art',
+  title: 'Tomodachi Life – Complete Guide, Personalities, QR Codes & More',
   description:
-    'Get the latest Titan Fishing Roblox codes 2026. Redeem free cash, rod skins & boosts. Complete guide, rod tier list, skill book strategies, and wiki updated daily.',
+    'Everything about Tomodachi Life: personalities guide, Mii QR codes, Living the Dream walkthrough, 3DS & Switch info. Your #1 Tomodachi Life fan resource updated 2026.',
   keywords: [
-    'titan fishing codes',
-    'titan fishing roblox codes',
-    'titan fishing codes 2026',
-    'titan fishing roblox',
-    'titan fishing wiki',
-    'titan fishing guide',
-    'titan fishing skill book',
-    'titan fishing rod tier list',
-    'roblox titan fishing',
+    'tomodachi life',
+    'tomodachi life personalities',
+    'tomodachi life personality chart',
+    'tomodachi life living the dream',
+    'tomodachi life qr codes',
+    'tomodachi life mii',
+    'tomodachi life switch',
+    'tomodachi life 3ds',
+    'nintendo tomodachi life',
+    'tomodachi life guide',
   ],
-  metadataBase: new URL('https://www.titanfishing.art'),
+  metadataBase: new URL('https://www.tomodachi-life.org'),
   openGraph: {
-    title: 'Titan Fishing Codes 2026 – Roblox Guide & Wiki',
+    title: 'Tomodachi Life – Complete Guide, Personalities & QR Codes',
     description:
-      'Latest Titan Fishing codes, rod tier lists, skill book guides, and community wiki. Updated daily!',
-    url: 'https://www.titanfishing.art',
-    siteName: 'Titan Fishing Fan Site',
+      'The #1 Tomodachi Life fan resource. Personality chart, Mii QR codes, Living the Dream guide, ROM info, and more.',
+    url: 'https://www.tomodachi-life.org',
+    siteName: 'Tomodachi Life Guide',
     images: [
       {
-        url: '/images/logo.png',
+        url: '/images/og-cover.png',
         width: 1200,
         height: 630,
-        alt: 'Titan Fishing Roblox Fan Site',
+        alt: 'Tomodachi Life Fan Guide',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Titan Fishing Codes 2026 – Roblox Guide & Wiki',
-    description: 'Latest Titan Fishing codes, rod tier lists, and guides. Updated daily!',
+    title: 'Tomodachi Life – Complete Guide & Personalities',
+    description: 'Personalities, QR codes, Living the Dream guide, and more. Updated 2026.',
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1NFDZXRD9X"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-1NFDZXRD9X');
-          `}
-        </Script>
-        {/* Ads Script */}
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1NFDZXRD9X');
+        `}</Script>
         <Script
           src="https://pl28931065.effectivegatecpm.com/3e/89/e4/3e89e4cccaa743051cb61f3d59225c0f.js"
           strategy="lazyOnload"

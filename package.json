@@ -1,4 +1,5 @@
 {
+  "name": "tomodachi-life-org",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
