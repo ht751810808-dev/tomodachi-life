@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life 3DS – Complete Guide, ROM, Citra Emulator Setup 2026',
@@ -126,9 +127,21 @@ export default function ThreeDSPage() {
             </div>
           </div>
         </section>
+        <section style={{ padding: '0 0 3rem' }}>
+          <div className="container">
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-rom', label: 'ROM Guide', desc: '3DS .3ds and .cia ROM formats explained' },
+              { href: '/tomodachi-life-pc', label: 'PC Guide', desc: 'Play Tomodachi Life on Windows or Mac via Citra' },
+              { href: '/tomodachi-life-qr-codes', label: 'QR Codes', desc: 'How to scan Mii QR codes in Citra emulator' },
+              { href: '/tomodachi-life-save-editor', label: 'Save Editor', desc: 'Edit 3DS save files with JKSM and CFW' },
+              { href: '/tomodachi-life-personalities', label: 'Personalities Guide', desc: 'All 16 personality types in the original game' },
+              { href: '/tomodachi-life-hk', label: 'HK Version', desc: 'Playing the 3DS version in Hong Kong' },
+            ]} />
+          </div>
+        </section>
       </main>
       <Footer />
-      <style>{`.content-grid{grid-template-columns:2fr 1fr;}.sidebar-link-green{color:#3A8A44;}.sidebar-link-green:hover{color:#FF5AA5;}@media(max-width:900px){.content-grid{grid-template-columns:1fr!important;}}`}</style>
+      <style>{`.content-grid{grid-template-columns:2fr 1fr;}.sidebar-link-green{color:#3A8A44;}.sidebar-link-green:hover{color:#FF5AA5;}@media(max-width:900px){.content-grid{grid-template-columns:1fr!important;}}` }</style>
     </>
   );
 }

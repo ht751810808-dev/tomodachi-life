@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Personalities – All 16 Types + Personality Chart 2026',
@@ -140,6 +141,13 @@ export default function PersonalitiesPage() {
                 <Link href="/tomodachi-life-living-the-dream/personality-guide" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>LtD Personality Guide →</Link>
                 <Link href="/tomodachi-life-qr-codes" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Browse Mii QR Codes →</Link>
               </div>
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-living-the-dream/personality-guide', label: 'LtD Personality Guide', desc: 'All 16 personalities with new Living the Dream features' },
+                { href: '/tomodachi-life-save-editor', label: 'Save Editor', desc: 'Change Mii personality directly via save file editing' },
+                { href: '/tomodachi-life-qr-codes', label: 'QR Codes', desc: 'Scan Mii QR codes to populate your island' },
+                { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'Complete guide to the Switch sequel' },
+                { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: 'Play the original Tomodachi Life on 3DS or Citra' },
+              ]} />
             </div>
           </div>
         </section>

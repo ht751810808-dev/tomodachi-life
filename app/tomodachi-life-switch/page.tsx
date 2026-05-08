@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Switch – Is It Available? Complete Platform Guide 2026',
@@ -127,9 +128,22 @@ export default function SwitchPage() {
             </div>
           </div>
         </section>
+        <section style={{ padding: '0 0 3rem' }}>
+          <div className="container">
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'Complete guide to the Switch sequel' },
+              { href: '/tomodachi-life-living-the-dream/nsp', label: 'LtD NSP Guide', desc: 'Install Living the Dream via NSP on Switch CFW' },
+              { href: '/tomodachi-life-living-the-dream/rom', label: 'LtD ROM Guide', desc: 'XCI ROM format for Switch emulation' },
+              { href: '/tomodachi-life-release-date', label: 'Release Dates', desc: 'When Living the Dream launched globally' },
+              { href: '/tomodachi-life-hk', label: 'HK Version', desc: 'Switch availability for Hong Kong players' },
+              { href: '/tomodachi-life-2', label: 'Tomodachi Life 2', desc: 'Next installment speculation and rumors' },
+            ]} />
+          </div>
+        </section>
       </main>
       <Footer />
       <style>{`.content-grid{grid-template-columns:2fr 1fr;}.sidebar-link-red{color:#F43F5E;}.sidebar-link-red:hover{color:#FF5AA5;}@media(max-width:900px){.content-grid{grid-template-columns:1fr!important;}}`}</style>
+      {/* RelatedPages injected via section above */}
     </>
   );
 }

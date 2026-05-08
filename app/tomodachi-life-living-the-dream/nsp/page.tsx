@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream NSP – Nintendo Switch Format Guide 2026',
@@ -80,6 +81,15 @@ export default function LtDNSPPage() {
                 <Link href="/tomodachi-life-living-the-dream/rom" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>ROM Guide →</Link>
                 <Link href="/tomodachi-life-switch" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Switch Guide →</Link>
               </div>
+
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-living-the-dream/rom', label: 'LtD ROM Guide', desc: 'XCI ROM format vs NSP — full comparison' },
+                { href: '/tomodachi-life-living-the-dream/emulator', label: 'LtD Emulator Guide', desc: 'Ryujinx setup for loading NSP files' },
+                { href: '/tomodachi-life-living-the-dream/pc', label: 'LtD PC Guide', desc: 'Complete PC setup for Living the Dream' },
+                { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Install NSP on Nintendo Switch with Atmosphere CFW' },
+                { href: '/tomodachi-life-living-the-dream', label: 'LtD Full Guide', desc: 'Complete hub for Tomodachi Life: Living the Dream' },
+                { href: '/tomodachi-life-rom', label: 'ROM Overview', desc: 'All Tomodachi Life ROM formats and emulators' },
+              ]} />
             </div>
           </div>
         </section>

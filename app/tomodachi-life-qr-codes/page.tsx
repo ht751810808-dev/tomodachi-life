@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life QR Codes – Mii QR Code Collection & Scanning Guide 2026',
@@ -112,6 +113,13 @@ export default function QRCodesPage() {
               <Link href="/tomodachi-life-personalities" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Personality Guide →</Link>
               <Link href="/tomodachi-life-save-editor" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Save Editor →</Link>
             </div>
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-personalities', label: 'Personalities Guide', desc: 'All 16 Mii personality types explained' },
+              { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: 'How to scan QR codes on real 3DS hardware' },
+              { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'QR code sharing in the Switch sequel' },
+              { href: '/tomodachi-life-save-editor', label: 'Save Editor', desc: 'Edit Mii appearance and personality directly' },
+              { href: '/tomodachi-life-pc', label: 'Play on PC', desc: 'Scan QR codes in Citra or Ryujinx emulator' },
+            ]} />
           </div>
         </section>
       </main>

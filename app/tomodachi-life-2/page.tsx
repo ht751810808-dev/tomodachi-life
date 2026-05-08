@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life 2 – Everything We Know (Release Date, Features, Platform)',
@@ -125,6 +126,16 @@ export default function TomodachiLife2Page() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section style={{ padding: '0 0 3rem' }}>
+          <div className="container">
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-release-date', label: 'Release Date History', desc: 'Full timeline from 2013 original to LtD 2026' },
+              { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Living the Dream — the current Switch sequel' },
+              { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'What TL2 fans are playing right now' },
+              { href: '/tomodachi-life-personalities', label: 'Personalities Guide', desc: 'The 16 personality types expected in TL2' },
+            ]} />
           </div>
         </section>
       </main>

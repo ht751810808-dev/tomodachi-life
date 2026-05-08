@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Release Date – Full History & Living the Dream Launch 2026',
@@ -123,6 +124,13 @@ export default function ReleaseDatePage() {
               <Link href="/tomodachi-life-2" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>TL2 Speculation →</Link>
               <Link href="/tomodachi-life-switch" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Switch Guide →</Link>
             </div>
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-2', label: 'Tomodachi Life 2', desc: 'Rumors and speculation for the next installment' },
+              { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Living the Dream on Nintendo Switch' },
+              { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'Full guide to the 2026 Switch sequel' },
+              { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: 'The original 2013–2014 3DS release' },
+              { href: '/tomodachi-life-hk', label: 'HK Version', desc: 'Regional release info for Hong Kong players' },
+            ]} />
           </div>
         </section>
       </main>

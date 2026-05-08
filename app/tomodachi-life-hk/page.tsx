@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Hong Kong – HK Version Guide & Availability 2026',
@@ -156,6 +157,13 @@ export default function TomodachiLifeHKPage() {
               <Link href="/tomodachi-life-3ds" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>3DS Guide →</Link>
               <Link href="/tomodachi-life-switch" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Switch Guide →</Link>
             </div>
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: 'Region-free play via Luma3DS CFW' },
+              { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Living the Dream availability on Switch' },
+              { href: '/tomodachi-life-living-the-dream', label: 'Living the Dream', desc: 'Full guide — includes Traditional Chinese support' },
+              { href: '/tomodachi-life-rom', label: 'ROM Guide', desc: 'Play via emulator — no region restrictions' },
+              { href: '/tomodachi-life-release-date', label: 'Release Dates', desc: 'Full regional release history' },
+            ]} />
           </div>
         </section>
       </main>

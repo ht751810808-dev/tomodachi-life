@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream ROM – Download & Setup Guide 2026',
@@ -85,6 +86,15 @@ export default function LtDRomPage() {
                 <Link href="/tomodachi-life-living-the-dream/nsp" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>NSP Guide →</Link>
                 <Link href="/tomodachi-life-living-the-dream/emulator" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Emulator Setup →</Link>
               </div>
+
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-living-the-dream/nsp', label: 'LtD NSP Guide', desc: 'NSP vs ROM — which format to use for LtD' },
+                { href: '/tomodachi-life-living-the-dream/emulator', label: 'LtD Emulator Guide', desc: 'Ryujinx and Suyu setup for Living the Dream' },
+                { href: '/tomodachi-life-living-the-dream/pc', label: 'LtD PC Guide', desc: 'Full PC setup guide for Living the Dream' },
+                { href: '/tomodachi-life-rom', label: 'ROM Overview', desc: '3DS and Switch ROM formats compared' },
+                { href: '/tomodachi-life-living-the-dream', label: 'LtD Full Guide', desc: 'Complete hub for Tomodachi Life: Living the Dream' },
+                { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Living the Dream on Nintendo Switch hardware' },
+              ]} />
             </div>
           </div>
         </section>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream Emulator – Best Setup Guide 2026',
@@ -93,6 +94,15 @@ export default function LtDEmulatorPage() {
                 <Link href="/tomodachi-life-living-the-dream/rom" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Get ROM Guide →</Link>
                 <Link href="/tomodachi-life-living-the-dream/nsp" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>NSP Guide →</Link>
               </div>
+
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-living-the-dream/pc', label: 'LtD PC Guide', desc: 'System requirements and PC setup for Living the Dream' },
+                { href: '/tomodachi-life-living-the-dream/rom', label: 'LtD ROM Guide', desc: 'XCI ROM formats and emulator compatibility' },
+                { href: '/tomodachi-life-living-the-dream/nsp', label: 'LtD NSP Guide', desc: 'NSP format for Ryujinx and Switch CFW' },
+                { href: '/tomodachi-life-living-the-dream', label: 'LtD Full Guide', desc: 'Complete hub for Tomodachi Life: Living the Dream' },
+                { href: '/tomodachi-life-3ds', label: '3DS Emulator Guide', desc: 'Citra emulator setup for the original 3DS game' },
+                { href: '/tomodachi-life-pc', label: 'PC Overview', desc: 'Play both TL versions on Windows or Mac' },
+              ]} />
             </div>
           </div>
         </section>

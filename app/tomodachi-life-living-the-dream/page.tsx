@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
@@ -186,6 +187,24 @@ export default function LivingTheDreamPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Related pages */}
+        <section style={{ padding: '0 0 3.5rem' }}>
+          <div className="container">
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-switch', label: 'Switch Guide', desc: 'Living the Dream on Nintendo Switch hardware' },
+              { href: '/tomodachi-life-living-the-dream/pc', label: 'Play on PC', desc: 'Emulator setup to run LtD on Windows or Mac' },
+              { href: '/tomodachi-life-living-the-dream/emulator', label: 'Emulator Guide', desc: 'Ryujinx and Suyu setup for Living the Dream' },
+              { href: '/tomodachi-life-living-the-dream/rom', label: 'ROM Guide', desc: 'XCI and NSP formats for LtD emulation' },
+              { href: '/tomodachi-life-living-the-dream/nsp', label: 'NSP Guide', desc: 'NSP install on Switch CFW or Ryujinx' },
+              { href: '/tomodachi-life-living-the-dream/personality-guide', label: 'Personality Chart', desc: 'All 16 LtD personalities with new features' },
+              { href: '/tomodachi-life-personalities', label: 'Original Personalities', desc: 'Compare with 3DS personality system' },
+              { href: '/tomodachi-life-qr-codes', label: 'QR Codes', desc: 'Import Mii characters into Living the Dream' },
+              { href: '/tomodachi-life-3ds', label: '3DS Original', desc: 'Classic Tomodachi Life on Nintendo 3DS' },
+              { href: '/tomodachi-life-2', label: 'Tomodachi Life 2', desc: 'What\'s next after Living the Dream?' },
+            ]} />
           </div>
         </section>
       </main>

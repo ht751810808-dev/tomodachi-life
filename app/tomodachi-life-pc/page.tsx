@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life PC – How to Play on Windows & Mac (Emulator Guide) 2026',
@@ -92,6 +93,13 @@ export default function PCPage() {
                 <Link href="/tomodachi-life-living-the-dream/pc" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>Living the Dream PC Guide →</Link>
                 <Link href="/tomodachi-life-3ds" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>3DS on PC (Citra) →</Link>
               </div>
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-living-the-dream/pc', label: 'LtD PC Guide', desc: 'Full Ryujinx setup for Living the Dream' },
+                { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: 'Play original Tomodachi Life via Citra on PC' },
+                { href: '/tomodachi-life-living-the-dream/emulator', label: 'LtD Emulator', desc: 'Ryujinx vs Suyu comparison and setup' },
+                { href: '/tomodachi-life-rom', label: 'ROM Guide', desc: 'ROM formats for PC emulation' },
+                { href: '/tomodachi-life-qr-codes', label: 'QR Codes', desc: 'Scan Mii QR codes in Citra emulator' },
+              ]} />
             </div>
           </div>
         </section>

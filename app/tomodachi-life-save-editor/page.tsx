@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Save Editor – Edit Your Island Save File 2026',
@@ -161,6 +162,13 @@ export default function SaveEditorPage() {
               <Link href="/tomodachi-life-3ds" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>3DS CFW Guide →</Link>
               <Link href="/tomodachi-life-rom" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>ROM Guide →</Link>
             </div>
+            <RelatedPages pages={[
+              { href: '/tomodachi-life-3ds', label: '3DS CFW Guide', desc: 'Install Luma3DS to enable save file access' },
+              { href: '/tomodachi-life-rom', label: 'ROM Guide', desc: 'ROM formats needed for emulator save editing' },
+              { href: '/tomodachi-life-personalities', label: 'Personalities Guide', desc: 'All 16 personality types you can set via save editor' },
+              { href: '/tomodachi-life-living-the-dream/personality-guide', label: 'LtD Personality Guide', desc: 'Personality values in the Switch version' },
+              { href: '/tomodachi-life-living-the-dream/emulator', label: 'LtD Emulator', desc: 'Access Living the Dream saves via Ryujinx' },
+            ]} />
           </div>
         </section>
       </main>

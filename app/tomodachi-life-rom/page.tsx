@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life ROM – Complete Download & Emulator Guide 2026',
@@ -92,6 +93,13 @@ export default function RomPage() {
                 <Link href="/tomodachi-life-3ds" className="btn-primary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>3DS ROM Guide →</Link>
                 <Link href="/tomodachi-life-living-the-dream/rom" className="btn-secondary" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem' }}>LtD ROM Guide →</Link>
               </div>
+              <RelatedPages pages={[
+                { href: '/tomodachi-life-3ds', label: '3DS Guide', desc: '3DS ROM setup with Citra emulator' },
+                { href: '/tomodachi-life-living-the-dream/rom', label: 'LtD ROM Guide', desc: 'XCI and NSP formats for Living the Dream' },
+                { href: '/tomodachi-life-living-the-dream/nsp', label: 'NSP Guide', desc: 'NSP vs ROM — which to use for Switch/PC' },
+                { href: '/tomodachi-life-pc', label: 'PC Guide', desc: 'Play Tomodachi Life on Windows or Mac' },
+                { href: '/tomodachi-life-save-editor', label: 'Save Editor', desc: 'Edit save files after extracting from ROM' },
+              ]} />
             </div>
           </div>
         </section>
