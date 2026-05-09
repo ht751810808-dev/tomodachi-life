@@ -41,22 +41,32 @@ export const metadata: Metadata = {
     description: 'Personalities, QR codes, Living the Dream guide, and more. Updated 2026.',
   },
   robots: { index: true, follow: true },
+  other: {
+    'google-adsense-account': 'ca-pub-4159784234426326',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1NFDZXRD9X"
+          src="https://www.googletagmanager.com/gtag/js?id=G-9TRS67EPZK"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-1NFDZXRD9X');
+          gtag('config', 'G-9TRS67EPZK');
         `}</Script>
+        {/* Google AdSense Auto Ads */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4159784234426326"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         <Script
           src="https://pl28931065.effectivegatecpm.com/3e/89/e4/3e89e4cccaa743051cb61f3d59225c0f.js"
           strategy="lazyOnload"

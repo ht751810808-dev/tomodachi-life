@@ -140,6 +140,56 @@ export default function Footer() {
 
         <hr className="divider" />
 
+        {/* Friend Links */}
+        <div style={{ paddingBottom: '2rem' }}>
+          <h4 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '0.85rem',
+            fontWeight: 600,
+            color: 'var(--color-text-muted)',
+            marginBottom: '0.875rem',
+            letterSpacing: '0.06em',
+            textTransform: 'uppercase',
+          }}>
+            Friend Links
+          </h4>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {[
+              { label: 'Bazi Calculator', href: 'https://bazi-calculator.app' },
+              { label: 'Sailor Piece', href: 'https://www.sailorpiece.help/' },
+              { label: 'Titan Fishing', href: 'https://www.titanfishing.art/' },
+              { label: 'Imposter Game', href: 'https://www.impostergame.pro/' },
+              { label: 'Bojack Test', href: 'https://www.bojacktest.com/' },
+              { label: "Women's March Madness", href: 'https://www.womensmarchmadness.wiki/' },
+              { label: 'Mem Palace', href: 'https://www.mempalace.tech/' },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  fontSize: '0.78rem',
+                  color: 'var(--color-text-muted)',
+                  textDecoration: 'none',
+                  padding: '0.25rem 0.65rem',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1.5px solid var(--color-border)',
+                  background: 'white',
+                  transition: 'color 150ms ease, border-color 150ms ease',
+                  cursor: 'pointer',
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.color = 'var(--color-pink-dark)'; e.currentTarget.style.borderColor = 'var(--color-pink-light)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.color = 'var(--color-text-muted)'; e.currentTarget.style.borderColor = 'var(--color-border)'; }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <hr className="divider" />
+
         {/* Bottom bar */}
         <div style={{
           display: 'flex',

@@ -7,6 +7,8 @@ import LivingTheDreamBanner from '@/components/LivingTheDreamBanner';
 import MiiQRSection from '@/components/MiiQRSection';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
+import SocialShare from '@/components/SocialShare';
+import CommentBox from '@/components/CommentBox';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -203,7 +205,7 @@ export default function HomePage() {
               <p style={{ color: 'var(--color-text-muted)', lineHeight: 1.8, marginBottom: '2.5rem', fontSize: '1.05rem' }}>
                 From setting up your island to mastering every Tomodachi Life personality type, we've got everything covered. Dive in and discover why millions of fans love Tomodachi Life.
               </p>
-              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
                 <Link href="/tomodachi-life-personalities" className="btn-primary" style={{ fontSize: '1rem', padding: '0.9rem 2rem' }}>
                   Explore Personality Chart
                 </Link>
@@ -211,9 +213,15 @@ export default function HomePage() {
                   Living the Dream Guide
                 </Link>
               </div>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <SocialShare title="Tomodachi Life – Complete Guide, Personalities & QR Codes" url="https://www.tomodachi-life.org" />
+              </div>
             </div>
           </div>
         </section>
+
+        {/* 10. Island Chat (no-login comments) */}
+        <CommentBox page="home" />
       </main>
 
       <Footer />

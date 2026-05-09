@@ -8,6 +8,12 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "kv_namespaces": [
+    {
+      "binding": "COMMENTS",
+      "id": "68e38bb0745244c0a72344dfb605dfaf"
+    }
+  ],
   "observability": {
     "enabled": true
   },
