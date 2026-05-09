@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://www.tomodachi-life.org';
+const baseUrl = 'https://tomodachi-life.org';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
