@@ -4,19 +4,36 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import LtDSubNav from '@/components/LtDSubNav';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream PC – How to Play on Windows & Mac 2026',
   description: 'Step-by-step guide to playing Tomodachi Life: Living the Dream on PC. Best emulator setup, system requirements, installation, and troubleshooting tips for Windows and Mac.',
   keywords: ['tomodachi life living the dream pc', 'tomodachi life living the dream on pc', 'living the dream pc emulator'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream/pc' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream/pc' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Play Tomodachi Life Living the Dream on PC',
+  description: 'Complete setup guide for playing Tomodachi Life: Living the Dream on Windows or Mac using Ryujinx emulator.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Download Ryujinx', text: 'Download Ryujinx emulator from the official site and install it on your Windows or Mac computer.' },
+    { '@type': 'HowToStep', position: 2, name: 'Get prod.keys', text: 'Obtain prod.keys from your own Nintendo Switch and place them in the Ryujinx keys folder.' },
+    { '@type': 'HowToStep', position: 3, name: 'Install firmware', text: 'Install Switch firmware via Ryujinx Tools → Install Firmware → Install a firmware from XCI or ZIP.' },
+    { '@type': 'HowToStep', position: 4, name: 'Add game file', text: 'Go to Options → Settings → Game Directories and add the folder containing your Living the Dream NSP or XCI file.' },
+    { '@type': 'HowToStep', position: 5, name: 'Launch and play', text: 'Double-click Tomodachi Life: Living the Dream in your Ryujinx library to start playing.' },
+  ],
 };
 
 export default function LtDPCPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <Header />
       <main style={{ paddingTop: '88px', minHeight: '100vh', background: 'var(--color-bg)' }}>
+        <LtDSubNav />
         <section style={{ padding: '3.5rem 0 3rem', background: 'linear-gradient(135deg, #EFF9FF 0%, #FFF0F8 100%)', borderBottom: '2px solid var(--color-border)' }}>
           <div className="container">
             <BreadcrumbNav crumbs={[{label:'Home',href:'/'},{label:'Living the Dream',href:'/tomodachi-life-living-the-dream'},{label:'Play on PC'}]} />

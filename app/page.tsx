@@ -9,6 +9,8 @@ import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import SocialShare from '@/components/SocialShare';
 import CommentBox from '@/components/CommentBox';
+import PersonalityQuiz from '@/components/PersonalityQuiz';
+import IslandChecklist from '@/components/IslandChecklist';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     'tomodachi life 3ds',
     'nintendo tomodachi life',
   ],
-  alternates: { canonical: 'https://www.tomodachi-life.org' },
+  alternates: { canonical: 'https://tomodachi-life.org' },
 };
 
 const faqStructuredData = {
@@ -64,13 +66,8 @@ const websiteStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Tomodachi Life Guide',
-  url: 'https://www.tomodachi-life.org',
+  url: 'https://tomodachi-life.org',
   description: 'The #1 fan resource for Tomodachi Life — personalities, QR codes, Living the Dream guide, and more.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: { '@type': 'EntryPoint', urlTemplate: 'https://www.tomodachi-life.org/search?q={search_term_string}' },
-    'query-input': 'required name=search_term_string',
-  },
 };
 
 const subpageLinks = [
@@ -177,21 +174,27 @@ export default function HomePage() {
         </section>
 
         {/* 4. Game Features */}
+        <PersonalityQuiz />
+
+        {/* 5. Island Checklist */}
+        <IslandChecklist />
+
+        {/* 6. Game Features */}
         <Features />
 
-        {/* 5. Personality System Preview */}
+        {/* 7. Personality System Preview */}
         <PersonalityPreview />
 
-        {/* 6. Living the Dream Banner */}
+        {/* 8. Living the Dream Banner */}
         <LivingTheDreamBanner />
 
-        {/* 7. Mii QR Codes Section */}
+        {/* 9. Mii QR Codes Section */}
         <MiiQRSection />
 
-        {/* 8. FAQ */}
+        {/* 10. FAQ */}
         <FAQ />
 
-        {/* 9. Final CTA */}
+        {/* 11. Final CTA */}
         <section style={{ padding: '5rem 0', background: 'linear-gradient(135deg, #FFF0F8 0%, #F5EEFF 50%, #EFF8FF 100%)', textAlign: 'center' }}>
           <div className="container">
             <div style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -214,13 +217,13 @@ export default function HomePage() {
                 </Link>
               </div>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <SocialShare title="Tomodachi Life – Complete Guide, Personalities & QR Codes" url="https://www.tomodachi-life.org" />
+                <SocialShare title="Tomodachi Life – Complete Guide, Personalities & QR Codes" url="https://tomodachi-life.org" />
               </div>
             </div>
           </div>
         </section>
 
-        {/* 10. Island Chat (no-login comments) */}
+        {/* 12. Island Chat (no-login comments) */}
         <CommentBox page="home" />
       </main>
 

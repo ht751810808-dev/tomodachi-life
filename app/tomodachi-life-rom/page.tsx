@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life ROM – Complete Download & Emulator Guide 2026',
   description: 'Complete guide to Tomodachi Life ROM files. 3DS and Switch formats explained, emulator compatibility, and safe setup instructions for both versions.',
   keywords: ['tomodachi life rom', 'tomodachi life 3ds rom', 'tomodachi life rom download', 'tomodachi life rom emulator'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-rom' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-rom' },
 };
 
 export default function RomPage() {
@@ -72,7 +72,7 @@ export default function RomPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {[['Citra/Lime3DS','Original 3DS','.3ds / .cia','Excellent','✓ Fully playable'],['Ryujinx','Living the Dream','.XCI / .NSP','Excellent','✓ Fully playable'],['Suyu','Living the Dream','.XCI / .NSP','Very Good','✓ Fully playable'],['Azahar (Citra fork)','Original 3DS','.3ds / .cia','Very Good','✓ Fully playable'],['melonDS (on Switch)','Original 3DS','.3ds','Good','✓ Switch CFW only']].map((row,i)=>(
+                      {[['Citra/Lime3DS','Original 3DS','.3ds / .cia','Excellent','Fully playable'],['Ryujinx','Living the Dream','.XCI / .NSP','Excellent','Fully playable'],['Suyu','Living the Dream','.XCI / .NSP','Very Good','Fully playable'],['Azahar (Citra fork)','Original 3DS','.3ds / .cia','Very Good','Fully playable'],['melonDS (on Switch)','Original 3DS','.3ds','Good','Switch CFW only']].map((row,i)=>(
                         <tr key={i} style={{ background: i%2===0?'white':'#FAFAFF' }}>
                           {row.map((cell,j)=>(
                             <td key={j} style={{ padding: '0.6rem 0.75rem', color: j===4?'#3A8A44':j===0?'var(--color-text)':'var(--color-text-muted)', fontWeight: j===0||j===4?600:400, borderBottom: '1px solid var(--color-border)', fontSize: '0.82rem' }}>{cell}</td>

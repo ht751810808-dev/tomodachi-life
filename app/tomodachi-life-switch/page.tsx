@@ -4,12 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import SiteIcon from '@/components/SiteIcons';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Switch – Is It Available? Complete Platform Guide 2026',
   description: 'Is Tomodachi Life on Nintendo Switch? Complete guide to Tomodachi Life Switch availability, Living the Dream compatibility, emulation options, and what\'s coming next.',
   keywords: ['tomodachi life switch', 'tomodachi life for switch', 'tomodachi life nintendo switch', 'tomodachi life living the dream switch'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-switch' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-switch' },
 };
 
 export default function SwitchPage() {
@@ -50,11 +51,11 @@ export default function SwitchPage() {
                   </p>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginTop: '1.25rem' }}>
                     <div style={{ background: '#EDFFF0', border: '1.5px solid #AEEAB6', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
-                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: '#3A8A44', marginBottom: '0.3rem', fontSize: '0.9rem' }}>✓ Available on Switch</div>
+                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: '#3A8A44', marginBottom: '0.3rem', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}><SiteIcon name="check" size={15} strokeWidth={2.5} /> Available on Switch</div>
                       <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)' }}>Tomodachi Life: Living the Dream (2026)</div>
                     </div>
                     <div style={{ background: '#FFF5F5', border: '1.5px solid #FFC0C0', borderRadius: 'var(--radius-md)', padding: '1rem' }}>
-                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: '#B83232', marginBottom: '0.3rem', fontSize: '0.9rem' }}>✗ Not on Switch</div>
+                      <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: '#B83232', marginBottom: '0.3rem', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}><SiteIcon name="x" size={15} strokeWidth={2.5} /> Not on Switch</div>
                       <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)' }}>Original Tomodachi Life (3DS only)</div>
                     </div>
                   </div>
@@ -89,7 +90,7 @@ export default function SwitchPage() {
                     {[['Graphics', '720p/1080p HD', '400×240 3D display'],['Online', 'Full multiplayer & island visiting', 'Local wireless only'],['Miis', 'Enhanced customization', 'Classic 3DS Miis'],['Personalities', '16 expanded types', '16 original types'],['Content', 'New careers, locations, events', 'Classic island content'],['Platform', 'TV & handheld modes', 'Handheld only']].map(([feat,sw,ds],i) => (
                       <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr 1.2fr', gap: '0.5rem', padding: '0.75rem 1rem', background: i%2===0?'#F9F9FF':'white', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', fontSize: '0.82rem' }}>
                         <span style={{ fontWeight: 700, color: 'var(--color-text)' }}>{feat}</span>
-                        <span style={{ color: '#3A8A44', fontWeight: 600 }}>{sw} ✓</span>
+                        <span style={{ color: '#3A8A44', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>{sw} <SiteIcon name="check" size={13} strokeWidth={2.5} /></span>
                         <span style={{ color: 'var(--color-text-muted)' }}>{ds}</span>
                       </div>
                     ))}

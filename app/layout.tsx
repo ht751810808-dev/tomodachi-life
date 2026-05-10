@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     'nintendo tomodachi life',
     'tomodachi life guide',
   ],
-  metadataBase: new URL('https://www.tomodachi-life.org'),
+  metadataBase: new URL('https://tomodachi-life.org'),
   openGraph: {
     title: 'Tomodachi Life – Complete Guide, Personalities & QR Codes',
     description:
       'The #1 Tomodachi Life fan resource. Personality chart, Mii QR codes, Living the Dream guide, ROM info, and more.',
-    url: 'https://www.tomodachi-life.org',
+    url: 'https://tomodachi-life.org',
     siteName: 'Tomodachi Life Guide',
     images: [
       {
@@ -39,6 +39,18 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tomodachi Life – Complete Guide & Personalities',
     description: 'Personalities, QR codes, Living the Dream guide, and more. Updated 2026.',
+    images: ['/images/og-cover.png'],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    other: [
+      { rel: 'icon', url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { rel: 'icon', url: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
   },
   robots: { index: true, follow: true },
   other: {
@@ -48,7 +60,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         {/* Google Analytics */}
         <Script
@@ -66,10 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4159784234426326"
           strategy="afterInteractive"
           crossOrigin="anonymous"
-        />
-        <Script
-          src="https://pl28931065.effectivegatecpm.com/3e/89/e4/3e89e4cccaa743051cb61f3d59225c0f.js"
-          strategy="lazyOnload"
         />
       </head>
       <body>{children}</body>

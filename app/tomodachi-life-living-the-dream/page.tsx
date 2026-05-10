@@ -5,12 +5,13 @@ import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
 import FAQ from '@/components/FAQ';
+import LtDSubNav from '@/components/LtDSubNav';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream – Full Guide, ROM, PC & NSP | 2026',
   description: 'Complete guide to Tomodachi Life: Living the Dream. Play on Switch, PC, or emulator. Download ROM & NSP, master the personality system, and get the full walkthrough.',
   keywords: ['tomodachi life living the dream', 'tomodachi life living the dream pc', 'tomodachi life living the dream rom', 'tomodachi life living the dream nsp', 'tomodachi life living the dream emulator'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream' },
 };
 
 const articleSchema = {
@@ -18,7 +19,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Tomodachi Life: Living the Dream – Complete Guide 2026',
   description: 'Full guide covering Tomodachi Life: Living the Dream gameplay, ROM, NSP, PC emulator setup, and personality system.',
-  url: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream',
+  url: 'https://tomodachi-life.org/tomodachi-life-living-the-dream',
   datePublished: '2026-01-01',
   dateModified: '2026-05-08',
   author: { '@type': 'Organization', name: 'Tomodachi Life Guide' },
@@ -38,7 +39,7 @@ export default function LivingTheDreamPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Header />
       <main style={{ paddingTop: '88px', minHeight: '100vh', background: 'var(--color-bg)' }}>
-
+        <LtDSubNav />
         {/* Hero */}
         <section style={{ padding: '3.5rem 0 3rem', background: 'linear-gradient(135deg, #FFF0F8 0%, #F5EEFF 50%, #EFF8FF 100%)', borderBottom: '2px solid var(--color-border)' }}>
           <div className="container">

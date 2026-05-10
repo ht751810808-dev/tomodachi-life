@@ -4,12 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import SiteIcon, { type SiteIconName } from '@/components/SiteIcons';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Release Date – Full History & Living the Dream Launch 2026',
   description: 'Complete Tomodachi Life release date history. Original 3DS launch dates by region, Tomodachi Life: Living the Dream release, and what we know about Tomodachi Life 2.',
   keywords: ['tomodachi life release date', 'tomodachi life living the dream release date', 'when did tomodachi life come out', 'tomodachi life 2 release date'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-release-date' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-release-date' },
 };
 
 const releaseHistory = [
@@ -21,13 +22,13 @@ const releaseHistory = [
 ];
 
 const ltdFeatures = [
-  { icon: '🗓', label: 'Announced', value: 'September 2024 Nintendo Direct' },
-  { icon: '📅', label: 'Release Date', value: 'January 22, 2026' },
-  { icon: '🌍', label: 'Regions', value: 'Worldwide simultaneously' },
-  { icon: '🎮', label: 'Platform', value: 'Nintendo Switch' },
-  { icon: '💰', label: 'Price', value: '$59.99 USD / £49.99 GBP' },
-  { icon: '📦', label: 'Formats', value: 'Physical + Digital (Nintendo eShop)' },
-];
+  { icon: 'clipboard', label: 'Announced', value: 'September 2024 Nintendo Direct' },
+  { icon: 'star', label: 'Release Date', value: 'January 22, 2026' },
+  { icon: 'globe', label: 'Regions', value: 'Worldwide simultaneously' },
+  { icon: 'gamepad', label: 'Platform', value: 'Nintendo Switch' },
+  { icon: 'badgeCheck', label: 'Price', value: '$59.99 USD / £49.99 GBP' },
+  { icon: 'copy', label: 'Formats', value: 'Physical + Digital (Nintendo eShop)' },
+] as { icon: SiteIconName; label: string; value: string }[];
 
 export default function ReleaseDatePage() {
   return (
@@ -62,7 +63,9 @@ export default function ReleaseDatePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '2rem' }} className="ltd-grid">
               {ltdFeatures.map((f, i) => (
                 <div key={i} style={{ background: '#FFFBEE', border: '1.5px solid #FFE08A', borderRadius: 'var(--radius-md)', padding: '1rem', display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
-                  <span style={{ fontSize: '1.4rem' }}>{f.icon}</span>
+                  <span style={{ width: '34px', height: '34px', borderRadius: '12px', background: 'white', color: '#B8860B', border: '1px solid #FFE08A', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <SiteIcon name={f.icon} size={18} strokeWidth={2.4} />
+                  </span>
                   <div>
                     <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#B8860B', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.15rem' }}>{f.label}</div>
                     <div style={{ fontSize: '0.83rem', color: 'var(--color-text)', fontWeight: 600 }}>{f.value}</div>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life Hong Kong – HK Version Guide & Availability 2026',
   description: 'Tomodachi Life Hong Kong guide. HK version availability, language options, where to buy, region differences, and emulation options for Hong Kong players.',
   keywords: ['tomodachi life hk', 'tomodachi life hong kong', 'tomodachi life hk version', 'tomodachi life hong kong availability'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-hk' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-hk' },
 };
 
 const availability = [
@@ -95,8 +95,8 @@ export default function TomodachiLifeHKPage() {
                   {languages.map((row, i) => (
                     <tr key={i} style={{ background: i % 2 === 0 ? 'white' : '#F9FDFF' }}>
                       <td style={{ padding: '0.6rem 0.75rem', fontWeight: 600, color: 'var(--color-text)', borderBottom: '1px solid var(--color-border)', fontSize: '0.84rem' }}>{row.lang}</td>
-                      <td style={{ padding: '0.6rem 0.75rem', color: row.available3DS ? '#2A8A30' : '#B83232', fontWeight: 600, borderBottom: '1px solid var(--color-border)', fontSize: '0.84rem' }}>{row.available3DS ? '✓ Yes' : '✗ No'}</td>
-                      <td style={{ padding: '0.6rem 0.75rem', color: row.availableLtD ? '#2A8A30' : '#B83232', fontWeight: 600, borderBottom: '1px solid var(--color-border)', fontSize: '0.84rem' }}>{row.availableLtD ? '✓ Yes' : '✗ No'}</td>
+                      <td style={{ padding: '0.6rem 0.75rem', color: row.available3DS ? '#2A8A30' : '#B83232', fontWeight: 600, borderBottom: '1px solid var(--color-border)', fontSize: '0.84rem' }}>{row.available3DS ? 'Yes' : 'No'}</td>
+                      <td style={{ padding: '0.6rem 0.75rem', color: row.availableLtD ? '#2A8A30' : '#B83232', fontWeight: 600, borderBottom: '1px solid var(--color-border)', fontSize: '0.84rem' }}>{row.availableLtD ? 'Yes' : 'No'}</td>
                       <td style={{ padding: '0.6rem 0.75rem', color: 'var(--color-text-muted)', borderBottom: '1px solid var(--color-border)', fontSize: '0.8rem' }}>{row.note}</td>
                     </tr>
                   ))}

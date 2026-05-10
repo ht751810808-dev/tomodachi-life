@@ -7,10 +7,8 @@ interface Comment {
   name: string;
   message: string;
   timestamp: number;
-  emoji: string;
 }
 
-const EMOJIS = ['🌴', '🎮', '🌸', '⭐', '🏝️', '🎵', '🌈', '🍉', '🐟', '🌻', '🎀', '🦋'];
 const MAX_COMMENTS = 100;
 
 export async function GET(request: Request) {
@@ -50,7 +48,6 @@ export async function POST(request: Request) {
     name,
     message,
     timestamp: Date.now(),
-    emoji: EMOJIS[Math.floor(Math.random() * EMOJIS.length)],
   };
 
   try {

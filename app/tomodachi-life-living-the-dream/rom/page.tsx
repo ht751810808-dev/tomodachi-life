@@ -4,19 +4,36 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import LtDSubNav from '@/components/LtDSubNav';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream ROM – Download & Setup Guide 2026',
   description: 'Complete guide to Tomodachi Life: Living the Dream ROM files. Compatible formats, setup instructions for Ryujinx and Suyu, and ROM vs NSP comparison.',
   keywords: ['tomodachi life living the dream rom', 'living the dream rom download', 'living the dream nsp rom'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream/rom' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream/rom' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Play Tomodachi Life Living the Dream ROM on PC',
+  description: 'Set up Tomodachi Life: Living the Dream XCI/ROM on Ryujinx emulator for Windows and Mac.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Download Ryujinx', text: 'Download and install the Ryujinx Nintendo Switch emulator for your operating system.' },
+    { '@type': 'HowToStep', position: 2, name: 'Add prod.keys and firmware', text: 'Place your prod.keys file in the Ryujinx keys folder and install Switch firmware via Tools → Install Firmware.' },
+    { '@type': 'HowToStep', position: 3, name: 'Load the ROM', text: 'In Ryujinx go to File → Load Application and select your Living the Dream XCI or NSP file.' },
+    { '@type': 'HowToStep', position: 4, name: 'Configure graphics', text: 'Set graphics backend to Vulkan for best performance on Windows, or Metal on Mac.' },
+    { '@type': 'HowToStep', position: 5, name: 'Play the game', text: 'Launch Tomodachi Life: Living the Dream and enjoy at full speed.' },
+  ],
 };
 
 export default function LtDRomPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <Header />
       <main style={{ paddingTop: '88px', minHeight: '100vh', background: 'var(--color-bg)' }}>
+        <LtDSubNav />
         <section style={{ padding: '3.5rem 0 3rem', background: 'linear-gradient(135deg, #FFF5EE 0%, #FFF0F8 100%)', borderBottom: '2px solid var(--color-border)' }}>
           <div className="container">
             <BreadcrumbNav crumbs={[{label:'Home',href:'/'},{label:'Living the Dream',href:'/tomodachi-life-living-the-dream'},{label:'ROM Guide'}]} />
@@ -49,7 +66,7 @@ export default function LtDRomPage() {
               <div>
                 <h2 style={{ fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)', fontWeight: 700, marginBottom: '1rem' }}>Compatible ROM Formats for Living the Dream</h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                  {[{fmt:'.XCI',desc:'Game card dump — works with Ryujinx and Suyu. Use for most emulator setups.',compat:'Ryujinx ✓ / Suyu ✓',color:'#FF9F51'},{fmt:'.NSP',desc:'eShop format — also widely compatible. Best for Ryujinx with proper key setup.',compat:'Ryujinx ✓ / Suyu ✓',color:'#FF5AA5'},{fmt:'.NCA',desc:'Raw Nintendo Content Archive — requires conversion. Not recommended for beginners.',compat:'Advanced use only',color:'#C77DFF'}].map((f,i)=>(
+                  {[{fmt:'.XCI',desc:'Game card dump — works with Ryujinx and Suyu. Use for most emulator setups.',compat:'Ryujinx / Suyu',color:'#FF9F51'},{fmt:'.NSP',desc:'eShop format — also widely compatible. Best for Ryujinx with proper key setup.',compat:'Ryujinx / Suyu',color:'#FF5AA5'},{fmt:'.NCA',desc:'Raw Nintendo Content Archive — requires conversion. Not recommended for beginners.',compat:'Advanced use only',color:'#C77DFF'}].map((f,i)=>(
                     <div key={i} style={{background:'white',border:`1.5px solid ${f.color}33`,borderRadius:'var(--radius-md)',padding:'1rem 1.25rem',display:'flex',gap:'1rem',alignItems:'center'}}>
                       <code style={{background:`${f.color}15`,color:f.color,padding:'0.3rem 0.7rem',borderRadius:'6px',fontFamily:'monospace',fontWeight:700,fontSize:'0.9rem',flexShrink:0}}>{f.fmt}</code>
                       <div>

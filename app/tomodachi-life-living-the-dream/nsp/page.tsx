@@ -4,19 +4,37 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import SiteIcon from '@/components/SiteIcons';
+import LtDSubNav from '@/components/LtDSubNav';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream NSP – Nintendo Switch Format Guide 2026',
   description: 'Complete guide to Tomodachi Life: Living the Dream NSP format. Installation on Switch CFW, Ryujinx emulator setup, and NSP vs ROM comparison.',
   keywords: ['tomodachi life living the dream nsp', 'living the dream nsp switch', 'living the dream nsp ryujinx'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream/nsp' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream/nsp' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Install Tomodachi Life Living the Dream NSP on Nintendo Switch',
+  description: 'Install the Living the Dream NSP file on a Nintendo Switch running Atmosphere CFW using Tinfoil.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Install Atmosphere CFW', text: 'Install Atmosphere custom firmware on your Nintendo Switch.' },
+    { '@type': 'HowToStep', position: 2, name: 'Copy NSP to SD card', text: 'Copy the Tomodachi Life: Living the Dream NSP file to your Switch SD card.' },
+    { '@type': 'HowToStep', position: 3, name: 'Install Tinfoil', text: 'Install Tinfoil or Goldleaf NSP installer from the Homebrew App Store.' },
+    { '@type': 'HowToStep', position: 4, name: 'Install the NSP', text: 'Open Tinfoil → File Browser → navigate to your NSP file → select Install.' },
+    { '@type': 'HowToStep', position: 5, name: 'Launch the game', text: 'Wait for installation to complete, then launch Tomodachi Life: Living the Dream from the home menu.' },
+  ],
 };
 
 export default function LtDNSPPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <Header />
       <main style={{ paddingTop: '88px', minHeight: '100vh', background: 'var(--color-bg)' }}>
+        <LtDSubNav />
         <section style={{ padding: '3.5rem 0 3rem', background: 'linear-gradient(135deg, #FFF5F5 0%, #F5EEFF 100%)', borderBottom: '2px solid var(--color-border)' }}>
           <div className="container">
             <BreadcrumbNav crumbs={[{label:'Home',href:'/'},{label:'Living the Dream',href:'/tomodachi-life-living-the-dream'},{label:'NSP Guide'}]} />
@@ -48,8 +66,9 @@ export default function LtDNSPPage() {
               </div>
               <div>
                 <h2 style={{ fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)', fontWeight: 700, marginBottom: '1rem' }}>Installing Living the Dream NSP on Nintendo Switch</h2>
-                <div style={{ padding: '1rem 1.25rem', background: '#FFF5F5', border: '1.5px solid #FFC0C0', borderRadius: 'var(--radius-md)', marginBottom: '1rem', fontSize: '0.85rem', color: '#B83232' }}>
-                  ⚠️ Installing NSP files on Switch requires Atmosphere CFW. This modifies your Switch and may affect your Nintendo account. Proceed at your own risk and only on a secondary/offline Switch.
+                <div style={{ padding: '1rem 1.25rem', background: '#FFF5F5', border: '1.5px solid #FFC0C0', borderRadius: 'var(--radius-md)', marginBottom: '1rem', fontSize: '0.85rem', color: '#B83232', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <SiteIcon name="alertTriangle" size={18} strokeWidth={2.3} style={{ flexShrink: 0, marginTop: '0.1rem' }} />
+                  <span>Installing NSP files on Switch requires Atmosphere CFW. This modifies your Switch and may affect your Nintendo account. Proceed at your own risk and only on a secondary/offline Switch.</span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                   {['Install Atmosphere CFW on your Nintendo Switch (visit AtmosphereNX GitHub)','Copy the Tomodachi Life: Living the Dream NSP to your Switch\'s SD card','Install Tinfoil or Goldleaf NSP installer from the Homebrew App Store','Open Tinfoil → File Browser → navigate to your NSP file','Select the Living the Dream NSP and choose "Install"','Wait for installation to complete — game appears in home menu','Launch Tomodachi Life: Living the Dream normally from home menu'].map((s,i)=>(

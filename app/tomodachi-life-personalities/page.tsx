@@ -4,12 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import PersonalityQuiz from '@/components/PersonalityQuiz';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Personalities – All 16 Types + Personality Chart 2026',
   description: 'Complete guide to all 16 Tomodachi Life personality types. Full personality chart, trait descriptions, compatibility, and how each personality shapes your Mii\'s island life.',
   keywords: ['tomodachi life personalities', 'tomodachi life personality chart', 'tomodachi life personality types', 'tomodachi life living the dream personality chart'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-personalities' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-personalities' },
 };
 
 const personalities = [
@@ -58,6 +59,8 @@ export default function PersonalitiesPage() {
             </div>
           </div>
         </section>
+
+        <PersonalityQuiz />
 
         {/* Category overview */}
         <section style={{ padding: '3rem 0', background: 'white', borderBottom: '1px solid var(--color-border)' }}>

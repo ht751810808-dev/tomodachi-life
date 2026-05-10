@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life 3DS – Complete Guide, ROM, Citra Emulator Setup 2026',
   description: 'Complete guide to Tomodachi Life on Nintendo 3DS. ROM download info, Citra emulator setup, Mii setup, gameplay tips, and how it compares to Living the Dream.',
   keywords: ['tomodachi life 3ds', 'tomodachi life 3ds rom', 'tomodachi life 3ds emulator', 'citra tomodachi life'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-3ds' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-3ds' },
 };
 
 export default function ThreeDSPage() {

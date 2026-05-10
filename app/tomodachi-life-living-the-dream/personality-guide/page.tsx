@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream Personality Guide & Chart 2026',
   description: 'Complete Tomodachi Life: Living the Dream personality guide. Full personality chart of all types, trait descriptions, and how personalities shape your Miis in LtD.',
   keywords: ['tomodachi life living the dream personality guide', 'tomodachi life living the dream personality chart', 'living the dream personality types'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream/personality-guide' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream/personality-guide' },
 };
 
 const personalities = [

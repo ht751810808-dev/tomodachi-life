@@ -4,12 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import MiiQRGallery from '@/components/MiiQRGallery';
+import SiteIcon, { type SiteIconName } from '@/components/SiteIcons';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life QR Codes – Mii QR Code Collection & Scanning Guide 2026',
   description: 'Best Tomodachi Life QR codes for Mii characters. How to scan Mii QR codes in Tomodachi Life, popular celebrity & character Miis, and how to create your own.',
   keywords: ['tomodachi life qr codes', 'tomodachi life mii qr codes', 'tomodachi life mii', 'tomodachi life qr code scanner'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-qr-codes' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-qr-codes' },
 };
 
 const miiCategories = [
@@ -52,21 +54,30 @@ export default function QRCodesPage() {
               Scanning <strong>Tomodachi Life Mii QR codes</strong> is simple — follow these steps to import any Mii character into your Tomodachi Life island in seconds. This works on real 3DS hardware, Citra emulator, and Tomodachi Life: Living the Dream on Switch.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2rem' }} className="steps-grid">
-              {[{step:'1',icon:'📱',title:'Open Mii Maker',desc:'Launch the Mii Maker app on your 3DS or in Citra emulator. In Living the Dream, access Mii settings from the island menu.'},
-                {step:'2',icon:'📷',title:'Select QR Code Option',desc:'Choose "QR Code / Image Options" from the Mii Maker main menu to enter the QR code scanning mode.'},
-                {step:'3',icon:'✅',title:'Scan the QR Code',desc:'Point your camera at any Tomodachi Life Mii QR code on screen or printed out. The Mii will be imported instantly.'}].map((s,i)=>(
+              {([
+                {step:'1',icon:'phone',title:'Open Mii Maker',desc:'Launch the Mii Maker app on your 3DS or in Citra emulator. In Living the Dream, access Mii settings from the island menu.'},
+                {step:'2',icon:'camera',title:'Select QR Code Option',desc:'Choose "QR Code / Image Options" from the Mii Maker main menu to enter the QR code scanning mode.'},
+                {step:'3',icon:'badgeCheck',title:'Scan the QR Code',desc:'Point your camera at any Tomodachi Life Mii QR code on screen or printed out. The Mii will be imported instantly.'}
+              ] as {step:string;icon:SiteIconName;title:string;desc:string}[]).map((s,i)=>(
                 <div key={i} style={{background:'#F0FAFF',border:'1.5px solid #B8EDF5',borderRadius:'var(--radius-lg)',padding:'1.5rem',textAlign:'center'}}>
-                  <div style={{fontSize:'2rem',marginBottom:'0.5rem'}}>{s.icon}</div>
+                  <div style={{width:'48px',height:'48px',borderRadius:'16px',background:'white',color:'#4BBFD6',display:'inline-flex',alignItems:'center',justifyContent:'center',marginBottom:'0.75rem',border:'1px solid #B8EDF5'}}>
+                    <SiteIcon name={s.icon} size={24} strokeWidth={2.4} />
+                  </div>
                   <div style={{fontFamily:'var(--font-display)',fontWeight:700,color:'#4BBFD6',fontSize:'0.9rem',marginBottom:'0.5rem'}}>Step {s.step}: {s.title}</div>
                   <div style={{fontSize:'0.82rem',color:'var(--color-text-muted)',lineHeight:1.7}}>{s.desc}</div>
                 </div>
               ))}
             </div>
-            <div style={{ padding: '1rem 1.25rem', background: '#EDFFF0', border: '1.5px solid #AEEAB6', borderRadius: 'var(--radius-md)', fontSize: '0.87rem', color: 'var(--color-text-muted)' }}>
-              💡 <strong style={{ color: 'var(--color-text)' }}>Tip:</strong> In Citra emulator, you can scan Tomodachi Life Mii QR codes by importing the image file directly: Mii Maker → QR Code → Import from File.
+            <div style={{ padding: '1rem 1.25rem', background: '#EDFFF0', border: '1.5px solid #AEEAB6', borderRadius: 'var(--radius-md)', fontSize: '0.87rem', color: 'var(--color-text-muted)', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+              <span style={{ width: '28px', height: '28px', borderRadius: '10px', background: 'white', color: '#3A8A44', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <SiteIcon name="sparkle" size={16} />
+              </span>
+              <span><strong style={{ color: 'var(--color-text)' }}>Tip:</strong> In Citra emulator, you can scan Tomodachi Life Mii QR codes by importing the image file directly: Mii Maker → QR Code → Import from File.</span>
             </div>
           </div>
         </section>
+
+        <MiiQRGallery />
 
         <section style={{ padding: '4rem 0' }}>
           <div className="container">

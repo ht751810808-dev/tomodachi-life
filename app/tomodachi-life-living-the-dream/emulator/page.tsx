@@ -4,19 +4,36 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import LtDSubNav from '@/components/LtDSubNav';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life Living the Dream Emulator – Best Setup Guide 2026',
   description: 'Best emulators for Tomodachi Life: Living the Dream. Ryujinx, Suyu setup guides with performance tips, settings, and troubleshooting for Windows and Mac.',
   keywords: ['tomodachi life living the dream emulator', 'living the dream ryujinx', 'living the dream yuzu', 'tomodachi life switch emulator'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-living-the-dream/emulator' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-living-the-dream/emulator' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Set Up an Emulator for Tomodachi Life Living the Dream',
+  description: 'Configure Ryujinx emulator to run Tomodachi Life: Living the Dream on Windows or Mac at full speed.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Download Ryujinx', text: 'Download the latest Ryujinx build for your operating system (Windows x64 or macOS).' },
+    { '@type': 'HowToStep', position: 2, name: 'Configure keys', text: 'Place prod.keys and title.keys from your Switch into the Ryujinx keys directory.' },
+    { '@type': 'HowToStep', position: 3, name: 'Install firmware', text: 'Install Nintendo Switch firmware 18.0+ via Ryujinx Tools → Install Firmware.' },
+    { '@type': 'HowToStep', position: 4, name: 'Load game', text: 'Open your Living the Dream NSP or XCI file via File → Load Application.' },
+    { '@type': 'HowToStep', position: 5, name: 'Optimize settings', text: 'Set graphics backend to Vulkan (Windows) or Metal (Mac), enable PPTC, and set resolution scale to 2x for best visuals.' },
+  ],
 };
 
 export default function LtDEmulatorPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <Header />
       <main style={{ paddingTop: '88px', minHeight: '100vh', background: 'var(--color-bg)' }}>
+        <LtDSubNav />
         <section style={{ padding: '3.5rem 0 3rem', background: 'linear-gradient(135deg, #F5EEFF 0%, #EFF9FF 100%)', borderBottom: '2px solid var(--color-border)' }}>
           <div className="container">
             <BreadcrumbNav crumbs={[{label:'Home',href:'/'},{label:'Living the Dream',href:'/tomodachi-life-living-the-dream'},{label:'Emulator'}]} />
@@ -47,7 +64,7 @@ export default function LtDEmulatorPage() {
                   {[{name:'Ryujinx',pro:'Most stable, best accuracy, active development, open-source',con:'Slightly higher CPU usage',color:'#C77DFF',href:'https://ryujinx.org'},{name:'Suyu (Yuzu fork)',pro:'Better raw FPS on mid-range hardware, familiar Yuzu interface',con:'Less official support than Ryujinx',color:'#7DD8E8',href:'#'}].map((e,i)=>(
                     <div key={i} style={{ background: 'white', border: `2px solid ${e.color}44`, borderRadius: 'var(--radius-lg)', padding: '1.5rem' }}>
                       <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: e.color, fontSize: '1.05rem', marginBottom: '0.75rem' }}>{e.name}</div>
-                      <div style={{ fontSize: '0.82rem', color: '#3A8A44', marginBottom: '0.4rem' }}>✓ {e.pro}</div>
+                      <div style={{ fontSize: '0.82rem', color: '#3A8A44', marginBottom: '0.4rem' }}>Best for: {e.pro}</div>
                       <div style={{ fontSize: '0.82rem', color: 'var(--color-text-muted)' }}>△ {e.con}</div>
                     </div>
                   ))}

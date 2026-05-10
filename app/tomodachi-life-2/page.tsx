@@ -4,12 +4,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreadcrumbNav from '@/components/BreadcrumbNav';
 import RelatedPages from '@/components/RelatedPages';
+import SiteIcon from '@/components/SiteIcons';
 
 export const metadata: Metadata = {
   title: 'Tomodachi Life 2 – Everything We Know (Release Date, Features, Platform)',
   description: 'All confirmed details about Tomodachi Life 2. Release date rumors, new features, platforms, and what to expect from the next Tomodachi Life game after Living the Dream.',
   keywords: ['tomodachi life 2', 'tomodachi life 2 release date', 'tomodachi life sequel', 'tomodachi life switch 2'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-2' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-2' },
 };
 
 export default function TomodachiLife2Page() {
@@ -63,7 +64,7 @@ export default function TomodachiLife2Page() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                     {['Deeper personality system with more than 16 types', 'Expanded online multiplayer and island visiting', 'More life stages for Tomodachi Life Miis (career, retirement)', 'Enhanced Mii customization with hair/skin tone expansion', 'Cross-platform Mii QR code sharing', 'Seasonal events and a dynamic island economy', 'User-created content sharing via Nintendo online'].map((feat, i) => (
                       <div key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start', padding: '0.75rem 1rem', background: '#FFF5EE', border: '1px solid #FFD1A0', borderRadius: 'var(--radius-md)', fontSize: '0.9rem', color: 'var(--color-text)' }}>
-                        <span style={{ color: '#FF9F51', fontWeight: 700, flexShrink: 0 }}>✦</span>
+                        <span style={{ color: '#FF9F51', flexShrink: 0, marginTop: '0.1rem' }}><SiteIcon name="sparkle" size={15} strokeWidth={2.4} /></span>
                         {feat}
                       </div>
                     ))}

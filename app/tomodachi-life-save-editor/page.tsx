@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life Save Editor – Edit Your Island Save File 2026',
   description: 'Complete Tomodachi Life save editor guide. Best tools for editing save files on 3DS and Living the Dream, what you can change, and step-by-step instructions.',
   keywords: ['tomodachi life save editor', 'tomodachi life save file editor', 'tomodachi life editor', 'tomodachi life save file'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-save-editor' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-save-editor' },
 };
 
 const editableItems = [

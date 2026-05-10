@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Tomodachi Life PC – How to Play on Windows & Mac (Emulator Guide) 2026',
   description: 'How to play Tomodachi Life on PC. Best emulators for both original 3DS and Living the Dream versions, setup guides for Windows and Mac, and performance tips.',
   keywords: ['tomodachi life pc', 'tomodachi life on pc', 'tomodachi life pc emulator', 'play tomodachi life on computer'],
-  alternates: { canonical: 'https://www.tomodachi-life.org/tomodachi-life-pc' },
+  alternates: { canonical: 'https://tomodachi-life.org/tomodachi-life-pc' },
 };
 
 export default function PCPage() {
